@@ -59,7 +59,9 @@ Is [10, 1] the largest sequence sum?
 Let's look at all the positive sequence sums.
 
 [1, 5] => 6
+
 [3, 4] => 7
+
 [10, 1] => 11
 
 So [10, 1] is the largest of all these sequences. But is it the largest sequence in the entire input.
@@ -67,7 +69,9 @@ So [10, 1] is the largest of all these sequences. But is it the largest sequence
 How bout the following sums?
 
 [2, 5, -2, 3, 4] => 12
+
 [3, 4, -5, 10, 1] => 13
+
 [2, 5, -2, 3, 4, -5, 10, 1] => 18
 
 It turns out that the entire input sequence with all negative numbers included has the largest sum. So we can not simply use the negative numbers as delimiters for the positive sequences, and then discard them as we did before in the negative number preceeding and/or negative number trailing case above. We have to consider the impact the negative numbers have on the total sum.
@@ -99,11 +103,17 @@ However simply combining would cause us to lose the important information regard
 Series Partial Sums
 
     start_index   end_index  partial_sum
+
 0        0            1         7          // ie 5+2
+
 1        2            2         -2         // ie -2
+
 2        3            4         7          // ie 3+4
+
 3        5            5         -5         // ie -5
+
 4        6            7         11         // ie 10+1
+
 
 Prior to running the combining part of the algorithm it initially sets its max value to the largest value in the input, with the max_slice indices set to the index of the largest value. It sets the max_sum to 10, and sets the max_slice = [6, 6] which is 10's index inside the input array. This max value will be used to compare against during the combining portion.
 
