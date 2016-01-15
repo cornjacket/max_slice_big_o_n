@@ -102,17 +102,17 @@ However simply combining would cause us to lose the important information regard
 
 Series Partial Sums
 
-    start_index   end_index  partial_sum
+index,    start_index,   end_index,  partial_sum
 
-0        0            1         7          // ie 5+2
+0,        0,            1,         7          // ie 5+2
 
-1        2            2         -2         // ie -2
+1,        2,            2,         -2         // ie -2
 
-2        3            4         7          // ie 3+4
+2,        3,            4,         7          // ie 3+4
 
-3        5            5         -5         // ie -5
+3,        5,            5,         -5         // ie -5
 
-4        6            7         11         // ie 10+1
+4,        6,            7,         11         // ie 10+1
 
 
 Prior to running the combining part of the algorithm it initially sets its max value to the largest value in the input, with the max_slice indices set to the index of the largest value. It sets the max_sum to 10, and sets the max_slice = [6, 6] which is 10's index inside the input array. This max value will be used to compare against during the combining portion.
