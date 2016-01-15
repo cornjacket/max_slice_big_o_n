@@ -132,16 +132,27 @@ initially partial_sum = [7, -2, 7, -5, 11]
 
 
 7 is extracted from partial_sum,  partial_sum = [-2, 7, -5, 11]
+
 7 is combined with -2,            partial_sum = [5, 7, -5, 11],   // (7 + -2 ) = 5 > 0, combining across -2 increases the total sum
+
 5 is extracted from partial_sum,  partial_sum = [7, -5, 11]
+
 5 is combined with 7,             partial_sum = [12, -5, 11]
+
 12 is extracted from partial_sum, partial_sum = [-5, 11]
+
 12 is greater than the current max, so 12 is the new max now // 12>10
+
 12 is combined wih -5,            partial_sum = [7, 11] // (12+ -5) = 7 > 0, combining across -5 increases the sum
+
 7 is extrated from partial_sum,   partial_sum = [11]
+
 7 is combined with 11,            partial_sum = [18]
+
 18 is extracted from partial_sum, partial_sum = []
+
 18 is greater than the current max, so 18 is the new max now // 18>12
+
 
 
 
@@ -156,15 +167,25 @@ init max = 4, largest element in input
 initially partial_sum = [1, -2, 4, -2, 3]
 
 1 is extracted from partial_sum,  partial_sum = [-2, 4, -2, 3]
+
 1 is combined with -2,            partial_sum = [-1, 4, -2, 3] // ( 1 + -2 ) = -1
+
 -1 is extracted from partial_sum,  partial_sum = [4, -2, 3]
+
 -1 is discarded since it is less than 0, ie. as if we have a series of leading negative values
+
 4 is extracted from partial_sum,  partial_sum = [-2, 3]
+
 4 is combined with -2,            partial_sum = [2, 3]   // (4 + -2) = 2
+
 2 is extracted from partial_sum,  partial_sum = [3]
+
 2 is combined with 3,             partial_sum = [5] // (2 + 3) = 5
+
 5 is extracted from partial_sum,  partial_sum = []
+
 5 is greater than the current max, so 5 is the new max now // 5 > 4
+
 
 
 Timing
