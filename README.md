@@ -156,6 +156,8 @@ initially partial_sum = [7, -2, 7, -5, 11]
 
 
 
+
+
 Here is a trace of simpler input for the combiner
 
 input = [1, -2, 4, -1, -1, 3]
